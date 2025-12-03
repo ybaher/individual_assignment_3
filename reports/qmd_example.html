@@ -93,9 +93,9 @@ window.Quarto = {
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
   <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Table of Contents</h2>
    
-  <ul class="collapse">
+  <ul>
   <li><a href="#aim" id="toc-aim" class="nav-link active" data-scroll-target="#aim">Aim</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
@@ -141,25 +141,21 @@ window.Quarto = {
 </section>
 <section id="methods" class="level2">
 <h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<p>The Python programming language (<span class="citation" data-cites="Python">Van Rossum and Drake (<a href="#ref-Python" role="doc-biblioref">2009</a>)</span>) and the following Python packages were used to perform the analysis: pandas (<span class="citation" data-cites="pandas">McKinney (<a href="#ref-pandas" role="doc-biblioref">2010</a>)</span>), altair (<span class="citation" data-cites="altair">VanderPlas (<a href="#ref-altair" role="doc-biblioref">2018</a>)</span>), click (<span class="citation" data-cites="click">Team (<a href="#ref-click" role="doc-biblioref">2020</a>)</span>), as well as Quarto (<span class="citation" data-cites="Allaire_Quarto_2022">Allaire et al. (<a href="#ref-Allaire_Quarto_2022" role="doc-biblioref">2022</a>)</span>).<br>
-<em>Note: this report is adapted from Timbers (2020). </em></p>
+<p>The Python programming language (<span class="citation" data-cites="Python">Van Rossum and Drake (<a href="#ref-Python" role="doc-biblioref">2009</a>)</span>) and the following Python packages were used to perform the analysis: pandas (<span class="citation" data-cites="pandas">McKinney (<a href="#ref-pandas" role="doc-biblioref">2010</a>)</span>), altair (<span class="citation" data-cites="altair">VanderPlas (<a href="#ref-altair" role="doc-biblioref">2018</a>)</span>), click (<span class="citation" data-cites="click">Team (<a href="#ref-click" role="doc-biblioref">2020</a>)</span>), as well as Quarto (<span class="citation" data-cites="Allaire_Quarto_2022">Allaire et al. (<a href="#ref-Allaire_Quarto_2022" role="doc-biblioref">2022</a>)</span>). <em>Note: this report is adapted from Timbers (2020).</em></p>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<div id="fig-horse-pops" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-horse-pops-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../results/horse_pops_plot.png" class="img-fluid figure-img" style="width:70.0%">
+<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../results/horse_pops_plot.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-horse-pops-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Horse populations for all provinces in Canada from 1906 - 1972
 </figcaption>
 </figure>
 </div>
-<p>We can see from <a href="#fig-horse-pops" class="quarto-xref">Figure&nbsp;1</a> that Ontario, Saskatchewan and Alberta have had the highest horse populations in Canada.<br>
-All provinces have had a decline in horse populations since 1940.<br>
-This is likely due to the rebound of the Canadian automotive industry after the Great Depression and the Second World War.<br>
-An interesting follow-up visualisation would be car sales per year for each Province over the time period visualised above to further support this hypothesis.</p>
+<p>We can see from <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a> that Ontario, Saskatchewan and Alberta have had the highest horse populations in Canada. All provinces have had a decline in horse populations since 1940. This is likely due to the rebound of the Canadian automotive industry after the Great Depression and the Second World War. An interesting follow-up visualisation would be car sales per year for each Province over the time period visualised above to further support this hypothesis.</p>
 <p>Suppose we were interested in looking in more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations in <a href="#tbl-prov" class="quarto-xref">Table&nbsp;1</a>.</p>
 <div class="cell" data-execution_count="2">
 <div id="tbl-prov" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="2">
@@ -168,7 +164,7 @@ An interesting follow-up visualisation would be car sales per year for each Prov
 Table&nbsp;1: Standard deviation of historical (1906-1972) horse populations for each Canadian province.
 </figcaption>
 <div aria-describedby="tbl-prov-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -222,18 +218,18 @@ Table&nbsp;1: Standard deviation of historical (1906-1972) horse populations for
 </div>
 <p>Note that we define standard deviation (of a sample) as</p>
 <p><span class="math display">\[s = \sqrt{\frac{\sum_{i=1}^N (x_i - \overline{x})^2}{N-1} }\]</span></p>
-<p>Additionally, note that in <a href="#tbl-prov" class="quarto-xref">Table&nbsp;1</a> we consider the sample standard deviation of the number of horses during the same time span as <a href="#fig-horse-pops" class="quarto-xref">Figure&nbsp;1</a>.</p>
-<div id="fig-largest-sd" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>Additionally, note that in <a href="#tbl-prov" class="quarto-xref">Table&nbsp;1</a> we consider the sample standard deviation of the number of horses during the same time span as <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<div id="fig-horse-pops" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-largest-sd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-horse-pops-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../results/horse_pops_plot_largest_sd.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-largest-sd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-horse-pops-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Horse populations for the province with the largest standard deviation
 </figcaption>
 </figure>
 </div>
-<p>In <a href="#fig-largest-sd" class="quarto-xref">Figure&nbsp;2</a> we zoom in and look at the province of <strong>Saskatchewan</strong>, which had the largest spread of values in terms of standard deviation.</p>
+<p>In <a href="#fig-horse-pops" class="quarto-xref">Figure&nbsp;2</a> we zoom in and look at the province of Saskatchewan, which had the largest spread of values in terms of standard deviation.</p>
 </section>
 <section id="references" class="level2 unnumbered">
 
